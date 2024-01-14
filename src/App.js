@@ -1,23 +1,88 @@
-import logo from './logo.svg';
-import './App.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import CatCard from './Components/Cat';
+
+const data = [{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+{
+  imageSrc: 'https://cats.com/wp-content/uploads/2022/04/Classic-orange-tabby.jpg',
+  name: 'Biff',
+  age: 17,
+  description: 'Super cool cat'
+},
+]
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>My App</h1>
+
+      {/* <CatCard data={data} /> */}
+      <Container>
+        <Row>
+        {data.map((cat, i) => {
+          return (
+            <Col xs='12' sm='6' md='4' lg='3'>
+              <CatCard data={cat} />
+            </Col>
+          )
+        })}
+        </Row>
+      </Container>
     </div>
   );
 }
